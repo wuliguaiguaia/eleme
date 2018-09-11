@@ -1,0 +1,45 @@
+@media (min-device-pixel-ratio: 1.5) {
+    .border-1px {
+        &::after {
+            transform: scaleY(0.7);
+        }
+    }
+
+    .border-top-1px {
+        &::after {
+            transform: scaleY(0.7);
+        }
+    }
+
+    .border-left-1px {
+        &::after {
+            transform: scaleX(0.7);
+        }
+    }
+}
+
+@media (min-device-pixel-ratio: 2) {
+    .border-1px {
+        &::after {
+            transform: scaleY(0.5);
+        }
+    }
+
+    .border-top-1px {
+        &::after {
+            transform: scaleY(0.5);
+        }
+    }
+
+    .border-left-1px {
+        &::after {
+            transform: scaleX(0.5);
+        }
+    }
+}
+
+@media (min-device-pixel-ratio: 3) {
+    bg-image(url) {
+        background-image: url(url + '@3x.png');
+    }
+}

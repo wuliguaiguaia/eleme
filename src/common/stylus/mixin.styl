@@ -1,0 +1,51 @@
+border-1px(borderColor) {
+    position: relative;
+
+    &:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        border-top: 1px solid borderColor;
+    }
+}
+
+border-top-1px(borderColor) {
+    position: relative;
+
+    &:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        width: 100%;
+        border-top: 1px solid borderColor;
+    }
+}
+
+border-left-1px(borderColor) {
+    position: relative;
+
+    &:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        height: 100%;
+        border-left: 1px solid borderColor;
+    }
+}
+
+border-none() {
+    &:after {
+        display: none;
+    }
+}
+
+bg-image(url) {
+    background-image: url(url + '@2x.png');
+}
