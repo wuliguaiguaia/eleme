@@ -101,7 +101,6 @@ export default {
       if (this.scroll > 0) {
         scrollEle.scrollTo(0, this.scroll);
         console.log(this.scroll);
-
         // this.scroll = 0;
         // scrollEle.addEventListener("scroll", onscroll);
       }
