@@ -85,11 +85,7 @@ export default {
     this.supports = ["decrease", "discount", "special", "invoice", "guarantee"];
     this.$root.eventHub.$on("onSellerSelectFood", val => {
       this.selectFoods = val;
-      console.log("seller", this.selectFoods, "on");
     });
-
-    // let scrollEle = document.querySelector(".seller-wrap");
-    // scrollEle.addEventListener("scroll",this.onscroll);
   },
   methods: {
     onscroll(e) {
@@ -101,8 +97,6 @@ export default {
       if (this.scroll > 0) {
         scrollEle.scrollTo(0, this.scroll);
         console.log(this.scroll);
-        // this.scroll = 0;
-        // scrollEle.addEventListener("scroll", onscroll);
       }
     }
   }
