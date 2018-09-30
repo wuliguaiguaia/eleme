@@ -39,8 +39,6 @@ export default {
       let goodList = this.$store.state.goodList;
       let that = this;
       goodList.forEach(function(foo, idx) {
-        console.log(this);
-
         if (foo.name === that.food.name) {
           that.food.count = foo.count;
         }
