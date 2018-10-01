@@ -12,7 +12,7 @@ const seller = r => require.ensure([], () => r(require("@/components/seller/sell
 const foodDetail = r => require.ensure([], () => r(require("@/components/foodDetail/foodDetail")), 'foodDetail');
 
 export default new Router({
-    mode: 'hash',
+    mode: 'history',
     routes: [{
             path: '/',
             redirect: '/goods'
