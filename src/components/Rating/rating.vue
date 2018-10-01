@@ -57,11 +57,9 @@ export default {
   },
   components: { star, ratingSelect, shopCart },
   created() {
-    this.$http.get("api/ratings").then(
+    this.$http.get("/static/data.json").then(
       res => {
-        if (res.data.errno === 0) {
-          this.ratings = res.data.data;
-        }
+          this.ratings = res.body.ratings;
       },
       err => console.log(err)
     );
