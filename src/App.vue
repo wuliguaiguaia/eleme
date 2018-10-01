@@ -15,7 +15,6 @@
 </template>
 <script>
 import vHeader from "@/components/header/header";
-const ERROR_OK = 0;
 export default {
   name: "App",
   data() {
@@ -29,10 +28,8 @@ export default {
   },
   methods: {},
   created() {
-    this.$http.get("/api/seller").then((res, req) => {
-      if (res.data.errno === ERROR_OK) {
-        this.seller = res.data.data;
-      }
+    this.$http.get("/static/data.json").then((res, req) => {
+        this.seller = res.body.seller;
     });
   }
 };

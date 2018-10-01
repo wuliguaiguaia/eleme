@@ -101,9 +101,9 @@ export default {
     cartControl
   },
   created() {
-    this.$http.get("/api/goods").then(
+    this.$http.get("/static/data.json").then(
       res => {
-        this.goods = res.data.data;
+        this.goods = res.body.goods;
         this.$nextTick(() => {
           for (let i = 0; i < this.goods.length; i++) {
             this.goods[i].foods.forEach((food, index) => {
