@@ -40,7 +40,7 @@
 </template>
 
 <script>
-// import { goods } from "../../../data.json";
+import { goods } from "./../../../static/data.json";
 import $ from "jquery";
 import shopCart from "../shopcart/shopcart";
 import cartControl from "../cartControl/cartControl";
@@ -70,9 +70,10 @@ export default {
   },
   created() {
     this.supports = ["decrease", "discount", "special", "invoice", "guarantee"];
-    this.$http.get("./../../../static/data.json").then(
-      res => {
-        this.goods = res.body.goods;
+    // this.$http.get("./../../../static/data.json").then(
+    //   res => {
+        // this.goods = res.body.goods;
+        this.goods = goods;
         this.$nextTick(() => {
           for (let i = 0; i < this.goods.length; i++) {
             this.goods[i].foods.forEach((food, index) => {
@@ -82,9 +83,9 @@ export default {
           }
           this.calculateHeight();
         });
-      },
-      err => console.log(err)
-    );
+    //   },
+    //   err => console.log(err)
+    // );
   },
   components: {
     shopCart,

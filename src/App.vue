@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-// import { seller } from "./../data.json";
+import { seller } from "./../static/data.json";
 import vHeader from "@/components/header/header";
 export default {
   name: "App",
@@ -29,11 +29,10 @@ export default {
   },
   methods: {},
   created() {
-    this.$http.get("./../../static/data.json").then((res, req) => {
-      this.seller = res.body.seller;
-    //   this.seller = seller;
-      console.log(this.seller, "test seller");
-    });
+    // this.$http.get("./../../static/data.json").then((res, req) => {
+    //   this.seller = res.body.seller;
+      this.seller = seller;
+    // });
   }
 };
 </script>
