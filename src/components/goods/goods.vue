@@ -40,6 +40,7 @@
 </template>
 
 <script>
+// import { goods } from "../../../data.json";
 import $ from "jquery";
 import shopCart from "../shopcart/shopcart";
 import cartControl from "../cartControl/cartControl";
@@ -69,7 +70,7 @@ export default {
   },
   created() {
     this.supports = ["decrease", "discount", "special", "invoice", "guarantee"];
-    this.$http.get("/static/data.json").then(
+    this.$http.get("./../../../static/data.json").then(
       res => {
         this.goods = res.body.goods;
         this.$nextTick(() => {

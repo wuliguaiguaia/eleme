@@ -34,6 +34,7 @@
 </template>
 
 <script>
+// import { ratings } from "./../../../data.json";
 import star from "../star/star";
 import ratingSelect from "../ratingSelect/ratingSelect";
 import shopCart from "../shopcart/shopcart";
@@ -57,9 +58,10 @@ export default {
   },
   components: { star, ratingSelect, shopCart },
   created() {
-    this.$http.get("/static/data.json").then(
+    this.$http.get("./../../../static/data.json").then(
       res => {
-          this.ratings = res.body.ratings;
+        this.ratings = res.body.ratings;
+        // this.ratings = ratings;
       },
       err => console.log(err)
     );
